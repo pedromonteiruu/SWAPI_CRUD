@@ -3,6 +3,7 @@ package br.com.ibm.SWAP_APP.entities.peopleUtilities;
 import br.com.ibm.SWAP_APP.entities.People;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,15 +22,16 @@ public class BirthYear {
 
     @Id
     @Column(name="ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
 
     @Column(name="AGE")
     private String ageBirth;
 
     @Column(name="YEAR")
-    private Year YearBirth;
+    private String YearBirth;
 
-    @OneToOne
+    @OneToOne(mappedBy = "birthYear")
     @JsonBackReference
     private People people;
 

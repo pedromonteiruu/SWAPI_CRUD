@@ -20,7 +20,7 @@ import java.util.List;
 public class Gender {
 
     @Id
-    @Column(name="id")
+    @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idGender;
 
@@ -31,5 +31,6 @@ public class Gender {
     @JsonBackReference
     @JoinColumn(name="GENDER_ID")
     private List<People> people = new ArrayList<>();
+
 
 }

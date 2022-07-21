@@ -24,15 +24,15 @@ public class Color {
     @Column(name="NAME")
     private String Name;
 
-    @ManyToMany(mappedBy = "hairColor")
-    @JsonBackReference
-    List<People> peopleHair;
-
-    @ManyToMany(mappedBy = "eyeColor")
-    @JsonBackReference
-    List<People> peopleEye;
-
-    @ManyToMany(mappedBy = "skinColor")
-    @JsonBackReference
-    List<People> peopleSkin;
+//    @ManyToMany(mappedBy = "hairColor")
+//    @JsonBackReference
+//    List<People> peopleHair;
+//
+//    @ManyToMany(mappedBy = "eyeColor")
+//    @JsonBackReference
+//    List<People> peopleEye;
+//
+//    @ManyToMany(mappedBy = "skinColor")
+//    @JsonBackReference
+//    List<People> peopleSkin;
 }
